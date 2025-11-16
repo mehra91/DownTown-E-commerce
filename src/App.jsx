@@ -3,6 +3,8 @@ import Navbar from './Components/Navbar'
 import Carsoul from './Components/Carsoul'
 import CategoryCard from './Components/CategoryCard'
 import FeatureProductCard from './Components/FeatureProductCard'
+import Carsoul2 from './Components/Carsoul2'
+import About from './Components/About'
 
 const App = () => {
   return (
@@ -30,6 +32,8 @@ const App = () => {
         <FeatureProductCard />
          <FeatureProductCard />
       </div>
+      <Carsoul2/>
+     <About/>
 
     </>
   )
