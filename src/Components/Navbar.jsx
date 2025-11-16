@@ -22,7 +22,7 @@ const Navbar = () => {
                         Clothing
                     </li>
                 </div>
-                <div className='   focus-within:ring-2 focus-within:ring-black transition-all  h-10 w-50 flex items-center justify-center rounded-3xl overflow-hidden'>
+                <div className='   focus-within:ring-1 focus-within:ring-black transition-all  h-10 w-50 flex items-center justify-center rounded-3xl overflow-hidden'>
                     <input
                         type="text"
                         placeholder='Search Store...'
