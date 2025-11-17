@@ -11,29 +11,44 @@ const App = () => {
     <>
       <Navbar />
       <Carsoul />
-      <div className='h-10 w-5xl   mt-4 ml-4 flex items-center pl-5  '>
+      <div className='h-10 w-4xl     mt-4 ml-10 flex items-center justify-start   '>
         <h1 className='uppercase bg-linear-to-r from-red-400 via-red-600 to-slate-900  font-medium  bg-clip-text text-2xl text-transparent flex items-center justify-center '>
           Shop by Category
         </h1>
       </div>
-      <div className='  w-full h-auto    flex items-center justify-evenly  my-5 gap-5   flex-wrap'>
+      <div className='  w-auto h-auto    flex items-center justify-evenly  my-3 mx-4 gap-5   flex-wrap'>
 
         <CategoryCard />
+        <CategoryCard />
+         <CategoryCard />
         <CategoryCard />
 
       </div>
-      <div className='h-10 w-5xl mt-4 ml-4 flex items-center pl-5  '>
+      <div className='h-10  w-4xl     mt-4 ml-10 flex items-center justify-start   '>
         <h1 className='uppercase bg-linear-to-r from-red-400 via-red-600 to-slate-900  font-medium  bg-clip-text text-2xl text-transparent flex items-center justify-center '>
           Feature Products
         </h1>
       </div>
 
-      <div className='  h-75 w-full   flex items-center justify-evenly my-5    '>
+      <div className='  h-75   w-auto   flex items-center justify-between my-3 mx-10   '>
         <FeatureProductCard />
+         <FeatureProductCard />
+          <FeatureProductCard />
          <FeatureProductCard />
       </div>
       <Carsoul2/>
      <About/>
+      <div className='h-10  w-4xl     mt-4 ml-10 flex items-center justify-start   '>
+        <h1 className='uppercase bg-linear-to-r from-red-400 via-red-600 to-slate-900  font-medium  bg-clip-text text-2xl text-transparent flex items-center justify-center '>
+         Best Sale
+        </h1>
+      </div>
+      <div className='  h-75 w-auto   flex items-center justify-between    my-3 mx-10   '>
+        <FeatureProductCard />
+         <FeatureProductCard />
+          <FeatureProductCard />
+         <FeatureProductCard />
+      </div>
 
     </>
   )

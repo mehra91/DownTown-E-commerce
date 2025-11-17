@@ -4,14 +4,14 @@ import { BsArrowRepeat } from "react-icons/bs";
 
 const FeatureProductCard = () => {
     return (
-        <div className="h-75 w-50 flex flex-col justify-start overflow-hidden bg-white shadow hover:shadow-xl cursor-pointer relative group origin-top hover:scale-98 transition-all duration-200">
+        <div className="h-75 w-50 flex flex-col   items-start   overflow-hidden   shadow hover:shadow-xl cursor-pointer relative group origin-top hover:scale-98 transition-all duration-200">
 
 
             <div className="relative h-60 overflow-hidden">
                 <img
                     src="http://downtown.nop-station.com/images/thumbs/0003378_anessa-31-wide-leg-jean_700.webp"
                     alt=""
-                    className="h-60 w-full object-cover  transition-transform duration-500 group-hover:scale-108"
+                    className="h-60 w-50 object-cover  transition-transform duration-500 group-hover:scale-108"
                 />
 
 
