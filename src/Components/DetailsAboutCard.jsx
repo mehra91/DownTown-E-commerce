@@ -47,7 +47,7 @@ const DetailsAboutCard = () => {
 
 
 
-            <div className='h-full w-4/12 shadow  rounded-2xl  '>
+            <div className='h-full w-auto shadow  rounded-2xl  '>
                  <BigFeatureProductCard  />
             </div>
 

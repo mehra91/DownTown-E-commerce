@@ -86,7 +86,7 @@ const DetailSection = () => {
             </div>
             <div className='h-12 w-35 cursor-pointer flex items-center justify-center group relative text-lg  text-rose-50 bg-red-500 hover:z-10 overflow-hidden '>
               Add to cart
-              <div className='absolute inset-0 bg-red-500 origin-bottom -translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out  flex items-center justify-center  '>
+              <div className='absolute inset-0 bg-red-500 origin-bottom translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out  flex items-center justify-center  '>
                 Add to cart
               </div>
             </div>
