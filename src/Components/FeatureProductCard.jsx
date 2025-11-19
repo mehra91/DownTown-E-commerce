@@ -1,10 +1,13 @@
 import React from 'react'
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { BsArrowRepeat } from "react-icons/bs";
+import { useNavigate } from 'react-router-dom';
 
 const FeatureProductCard = () => {
+    const navigate=useNavigate();
     return (
-        <div className="h-75 w-50 flex flex-col   items-start   overflow-hidden   shadow hover:shadow-xl cursor-pointer relative group origin-top hover:scale-98 transition-all duration-200">
+        <div onClick={()=>navigate("/details")}
+         className="h-75 w-50 flex flex-col   items-start   overflow-hidden   shadow hover:shadow-xl cursor-pointer relative group origin-top hover:scale-98 transition-all duration-200">
 
 
             <div className="relative h-60 overflow-hidden">

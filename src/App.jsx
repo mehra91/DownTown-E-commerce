@@ -9,7 +9,9 @@ import About from './Components/About'
 const App = () => {
   return (
     <>
-      <Navbar />
+     <div className='relative'>
+       <Navbar />
+     </div>
       <Carsoul />
       <div className='h-10 w-4xl     mt-4 ml-10 flex items-center justify-start   '>
         <h1 className='uppercase bg-linear-to-r from-red-400 via-red-600 to-slate-900  font-medium  bg-clip-text text-2xl text-transparent flex items-center justify-center '>
