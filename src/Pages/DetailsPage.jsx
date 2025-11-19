@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
 import DetailSection from '../Components/DetailSection'
+import DetailsAboutCard from '../Components/DetailsAboutCard'
 
 const DetailsPage = () => {
   return (
@@ -10,6 +11,7 @@ const DetailsPage = () => {
             </div>
              
                <DetailSection/>
+               <DetailsAboutCard/>
             
         </>
   )

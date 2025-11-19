@@ -1,6 +1,8 @@
 import React from 'react'
 import { MdStarBorder } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa6";
+import { PiRepeatFill } from "react-icons/pi";
+import { FaRegEnvelope } from "react-icons/fa6";
 const DetailSection = () => {
   return (
     <div className='   flex items-center justify-center pt-25 h-auto w-auto'>
@@ -12,7 +14,7 @@ const DetailSection = () => {
           <img src="http://downtown.nop-station.com/images/thumbs/0003381_anessa-31-wide-leg-jean_800.webp  " alt="" className='h-70 w-65 object-cover flex items-center justify-center' />
 
         </div>
-        <div className='  h-auto  w-5/12 bg-slate-500 flex flex-col items-center p-4  '>
+        <div className='  h-auto  w-5/12  flex flex-col items-center p-4  '>
           <h2 className='text-xl flex items-center  h-auto w-full pl-2 font-semibold'>
             Anessa 31 Wide Leg Jean
           </h2>
@@ -61,33 +63,52 @@ const DetailSection = () => {
 
           <div className='flex items-center justify-start h-auto w-full p-2 mt-2 gap-x-5'>
             <span className='text-red-700  text-2xl font-medium '>
-                $259.00
+              $259.00
             </span>
             <span className='text-xl opacity-70 line-through '>
-                $220.00
+              $220.00
             </span>
           </div>
-          
-          <div className='h-auto w-full  flex items-center justify-evenly mt-2   '>
+
+          <div className='h-auto w-auto gap-x-5 py-2 gap-y-5 pl-4 pr-2   flex-wrap  flex items-center justify-start mt-2   '>
             <div className='h-12 w-18  flex items-center justify-start border '>
               <div className=' flex items-center justify-center border-r h-full w-1/2'>
-                 1
+                1
               </div>
               <div className='  flex items-center justify-evenly flex-col h-full w-1/2'>
-                 <section className=' h-1/2 w-full flex  items-center justify-center text-lg cursor-pointer'>
-                    +
-                 </section>
-                 <section className='border-t h-1/2 w-full cursor-pointer flex items-center justify-center text-xl'>
-                    -
-                 </section>
+                <section className=' h-1/2 w-full flex  items-center justify-center text-lg cursor-pointer'>
+                  +
+                </section>
+                <section className='border-t h-1/2 w-full cursor-pointer flex items-center justify-center text-xl'>
+                  -
+                </section>
               </div>
             </div>
-            <div className='h-12 w-35 cursor-pointer flex items-center justify-center text-lg  text-rose-50 bg-red-500'>
+            <div className='h-12 w-35 cursor-pointer flex items-center justify-center group relative text-lg  text-rose-50 bg-red-500 hover:z-10 overflow-hidden '>
               Add to cart
+              <div className='absolute inset-0 bg-red-500 origin-bottom -translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out  flex items-center justify-center  '>
+                Add to cart
+              </div>
             </div>
-            <div className='border h-12 w-12 cursor-pointer  flex items-center justify-center'>
-               <FaRegHeart className='text-2xl ' />
+            <div className='bg-gray-200 h-12 w-12 cursor-pointer  flex items-center justify-center group relative overflow-hidden    '>
+              <FaRegHeart className='text-2xl opacity-50  group-hover:z-1 group-hover:text-white  group-hover:opacity-100  ' />
 
+              <div className='absolute inset-0 bg-red-500 origin-bottom translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out  '>
+
+              </div>
+
+            </div>
+            <div className='bg-gray-200 h-12 w-12 cursor-pointer  flex items-center justify-center group relative  overflow-hidden    '>
+              <div className='absolute inset-0 bg-red-500 origin-bottom translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out  '>
+
+              </div>
+              <PiRepeatFill className='text-2xl group-hover:z-1 opacity-50  group-hover:text-white group-hover:opacity-100 ' />
+            </div>
+            <div className='bg-gray-200 h-12 w-12 cursor-pointer  flex items-center justify-center      group relative  overflow-hidden '>
+              <FaRegEnvelope className='text-2xl  group-hover:z-1 opacity-50 group-hover:text-white group-hover:opacity-100  ' />
+              <div className='absolute inset-0 bg-red-500 origin-bottom translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out  '>
+
+              </div>
             </div>
           </div>
 
