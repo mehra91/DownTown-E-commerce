@@ -5,6 +5,7 @@ import CategoryCard from './Components/CategoryCard'
 import FeatureProductCard from './Components/FeatureProductCard'
 import Carsoul2 from './Components/Carsoul2'
 import About from './Components/About'
+import Footer from './Components/Footer'
 
 const App = () => {
   return (
@@ -51,6 +52,7 @@ const App = () => {
           <FeatureProductCard />
          <FeatureProductCard />
       </div>
+      <Footer/>
 
     </>
   )

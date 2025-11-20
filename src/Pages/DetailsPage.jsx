@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar'
 import DetailSection from '../Components/DetailSection'
 import DetailsAboutCard from '../Components/DetailsAboutCard'
 import BigFeatureProductCard from '../Components/BigFeatureCard'
+import Footer from '../Components/Footer'
 
 const DetailsPage = () => {
   return (
@@ -23,6 +24,7 @@ const DetailsPage = () => {
         <BigFeatureProductCard  />
         <BigFeatureProductCard  />
       </div>
+       <Footer/>
 
     </>
   )

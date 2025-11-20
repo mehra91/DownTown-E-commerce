@@ -9,7 +9,7 @@ const Navbar = () => {
             <div className='flex items-center justify-between  bg-white text-black h-12 rounded-3xl  w-full   '>
                 <div className=' flex items-center justify-center h-10 w-40 '>
                     <img onClick={()=>{
-                        navigate("/");
+                        navigate("/")
                     }}
                      src="http://downtown.nop-station.com/images/thumbs/0003932_0003133_Frame%205.png" alt="Logo" className='h-10 w-30 px-2 py-2 cursor-pointer' />
                 </div>
