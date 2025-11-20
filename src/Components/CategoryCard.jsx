@@ -1,9 +1,14 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const CategoryCard = () => {
+  const navigate = useNavigate();
   return (
   
-    <div className='  h-60 w-55 flex items-center justify-center rounded overflow-hidden cursor-pointer group  relative ' >
+    <div  onClick={()=>{
+      navigate("/Category");
+    }}
+     className='  h-60 w-55 flex items-center justify-center rounded overflow-hidden cursor-pointer group  relative ' >
         <img src="http://downtown.nop-station.com/images/thumbs/0003269_men_460.webp" alt="" className='h-60 w-55 rounded object-cover' />
          <div className="
     absolute bottom-0 left-0 w-full h-full flex flex-col items-center    text-white
