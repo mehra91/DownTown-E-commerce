@@ -1,19 +1,28 @@
 import React, { useState } from 'react'
 import { GoPlus } from "react-icons/go";
+import { AiOutlineMinus } from "react-icons/ai";
 
 const FilterCard = () => {
-    const [plus, setPlus] = useState()
+    const [open, setOpen] = useState(false)
     return (
-        <div className=' bg-white h-auto w-full border   flex flex-col px-3 py-2   '>
-            <div className='h-8 w-full   flex items-center justify-center  '>
-                <div className='  h-8 w-full text-base  font-medium flex items-center justify-start px-1'>
+        <div className='  h-auto w-full    flex flex-col px-3 py-2 border-b   border-gray-800/20  '>
+            <div className='h-8 w-full   flex items-center justify-center '>
+                <div className='  h-8 w-full text-base  font-medium flex items-center justify-start px-1  '>
                     Filters
                 </div>
-                <div className=' h-8 w-full flex items-center justify-end px-1 cursor-pointer '>
-                    <GoPlus className='text-lg font-black ' />
+                <div onClick={()=>setOpen
+                    (!open)
+                }
+                 className=' h-8 w-8 flex items-center justify-end px-1 cursor-pointer '>
+                   {open ? ( 
+                   <AiOutlineMinus  className='text-base font-black'/>
+                   )
+                    : (
+                        <GoPlus className='text-lg font-black ' />
+                    )}
                 </div>
             </div>
-           <div className='border-3'>
+          { open &&( <div className='h-auto w-auto  transition-all duration-700 ease-in-out'>
                  <div className=' h-full w-full font-medium capitalize px-2 '>
                 size
                 <div className='h-auto  flex items-center justify-start gap-x-2 px-2 py-1 '>
@@ -68,7 +77,7 @@ const FilterCard = () => {
                     </h4>
                 </div>
             </div>
-           </div>
+           </div>)}
         </div>
     )
 }
