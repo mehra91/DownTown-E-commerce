@@ -11,11 +11,11 @@ const CategoryPage = () => {
             <div className='h-30 w-auto '>
 
             </div>
-            <div className='  h-auto  w-full flex items-center bg-gray-600   '>
+            <div className='  h-auto  w-full flex     '>
                 <div className='bg-white h-full flex items-center justify-center   pt-4 w-4/12'>
-                    <div className='h-full   border-2   w-10/12  leading-tight   p-2 '>
+                    <div className='h-full w-10/12  leading-tight transition-all duration-500 translate-y-0 rounded border-gray-800 shadow-2xl shadow-gray-600  p-2 '>
                         <FilterCard/>
-                         
+                         <FilterCard/> <FilterCard/>
                     </div>
                 </div>
                 <div className='bg-zinc-400 h-80 w-8/12'>
