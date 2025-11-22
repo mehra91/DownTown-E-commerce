@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './Components/Navbar'
 import Carsoul from './Components/Carsoul'
 import CategoryCard from './Components/CategoryCard'
@@ -8,11 +8,34 @@ import About from './Components/About'
 import Footer from './Components/Footer'
 
 const App = () => {
+  const [category , setCategory] = useState([]);
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const response = await fetch("https://dummyjson.com/products?limit=500");
+        const data = await response.json();
+         const seen = new Set();
+         const uniqueCategories = data.products.filter(product=>{
+          if(seen.has(product.category)){
+            return false;
+          }else{
+            seen.add(product.category)
+            return true;
+          }
+         });
+         setCategory(uniqueCategories);
+        
+      } catch (error) {
+        console.log("error is : ", error);
+      }
+    };
+    getProducts();
+  }, [])
   return (
     <>
-     <div className='relative'>
-       <Navbar />
-     </div>
+      <div className='relative'>
+        <Navbar />
+      </div>
       <Carsoul />
       <div className='h-10 w-4xl     mt-4 ml-10 flex items-center justify-start   '>
         <h1 className='uppercase bg-linear-to-r from-red-400 via-red-600 to-slate-900  font-medium  bg-clip-text text-2xl text-transparent flex items-center justify-center '>
@@ -21,10 +44,12 @@ const App = () => {
       </div>
       <div className='  w-auto h-auto    flex items-center justify-evenly  my-3 mx-4 gap-5   flex-wrap'>
 
-        <CategoryCard />
-        <CategoryCard />
-         <CategoryCard />
-        <CategoryCard />
+        {
+          category.map((category,idx)=>(
+            <CategoryCard key={idx} category ={category.category} tags={category.tags} thumbnail={category.thumbnail} />
+          ))
+        }
+         
 
       </div>
       <div className='h-10  w-4xl     mt-4 ml-10 flex items-center justify-start   '>
@@ -35,24 +60,24 @@ const App = () => {
 
       <div className='  h-75   w-auto   flex items-center justify-between my-3 mx-10   '>
         <FeatureProductCard />
-         <FeatureProductCard />
-          <FeatureProductCard />
-         <FeatureProductCard />
+        <FeatureProductCard />
+        <FeatureProductCard />
+        <FeatureProductCard />
       </div>
-      <Carsoul2/>
-     <About/>
+      <Carsoul2 />
+      <About />
       <div className='h-10  w-4xl     mt-4 ml-10 flex items-center justify-start   '>
         <h1 className='uppercase bg-linear-to-r from-red-400 via-red-600 to-slate-900  font-medium  bg-clip-text text-2xl text-transparent flex items-center justify-center '>
-         Best Sale
+          Best Sale
         </h1>
       </div>
       <div className='  h-75 w-auto   flex items-center justify-between    my-3 mx-10   '>
         <FeatureProductCard />
-         <FeatureProductCard />
-          <FeatureProductCard />
-         <FeatureProductCard />
+        <FeatureProductCard />
+        <FeatureProductCard />
+        <FeatureProductCard />
       </div>
-      <Footer/>
+      <Footer />
 
     </>
   )
