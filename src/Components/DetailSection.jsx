@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MdStarBorder } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa6";
 import { PiRepeatFill } from "react-icons/pi";
 import { FaRegEnvelope } from "react-icons/fa6";
 const DetailSection = () => {
+  const[number,setNumber] = useState(1);
   return (
     <div className='   flex items-center justify-center pt-25 h-auto w-auto'>
       <div className='h-auto w-5xl    flex items-evenly p-3 '>
@@ -73,13 +74,15 @@ const DetailSection = () => {
           <div className='h-auto w-auto gap-x-5 py-2 gap-y-5 pl-4 pr-2   flex-wrap  flex items-center justify-start mt-2   '>
             <div className='h-12 w-18  flex items-center justify-start border '>
               <div className=' flex items-center justify-center border-r h-full w-1/2'>
-                1
+               {number}
               </div>
               <div className='  flex items-center justify-evenly flex-col h-full w-1/2'>
-                <section className=' h-1/2 w-full flex  items-center justify-center text-lg cursor-pointer'>
+                <section onClick={()=>setNumber(number+1)}
+                 className=' h-1/2 w-full flex  items-center justify-center text-xl cursor-pointer'>
                   +
                 </section>
-                <section className='border-t h-1/2 w-full cursor-pointer flex items-center justify-center text-xl'>
+                <section onClick={()=>setNumber( prev=>Math.max(1,prev-1))}
+                className='border-t h-1/2 w-full cursor-pointer flex items-center justify-center text-2xl'>
                   -
                 </section>
               </div>

@@ -18,13 +18,13 @@ const Navbar = () => {
                       Men
                     </li>
                     <li className='cursor-pointer flex items-center justify-center text-sm h-9 w-19 rounded-3xl hover:bg-white hover:text-black  '>
-                        Women
+                        Jewelary
                     </li>
                     <li className='cursor-pointer flex items-center justify-center text-sm h-9 w-19 rounded-3xl hover:bg-white hover:text-black  '>
-                        Kids
+                        Electronics
                     </li>
                     <li className='cursor-pointer flex items-center justify-center text-sm h-9 w-19 rounded-3xl hover:bg-white hover:text-black  '>
-                        Clothing
+                       Women
                     </li>
                 </div>
                 <div className='   focus-within:ring-1 focus-within:ring-black transition-all  h-10 w-50 flex items-center justify-center rounded-3xl overflow-hidden'>

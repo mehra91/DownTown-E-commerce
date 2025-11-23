@@ -9,6 +9,7 @@ import Footer from './Components/Footer'
 
 const App = () => {
   const [category , setCategory] = useState([]);
+  
   useEffect(() => {
     const getProducts = async () => {
       try {
@@ -31,6 +32,7 @@ const App = () => {
     };
     getProducts();
   }, [])
+ 
   return (
     <>
       <div className='relative'>
@@ -54,7 +56,9 @@ const App = () => {
       </div>
       <div className='h-10  w-4xl     mt-4 ml-10 flex items-center justify-start   '>
         <h1 className='uppercase bg-linear-to-r from-red-400 via-red-600 to-slate-900  font-medium  bg-clip-text text-2xl text-transparent flex items-center justify-center '>
-          Feature Products
+           {
+            category.length>0 ?category[0].category:"Loading..."
+           }
         </h1>
       </div>
 
