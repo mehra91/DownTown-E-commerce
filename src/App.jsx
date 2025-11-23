@@ -12,10 +12,10 @@ const App = () => {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const response = await fetch("https://dummyjson.com/products?limit=500");
+        const response = await fetch("https://fakestoreapi.com/products");
         const data = await response.json();
          const seen = new Set();
-         const uniqueCategories = data.products.filter(product=>{
+         const uniqueCategories = data.filter(product=>{
           if(seen.has(product.category)){
             return false;
           }else{
@@ -46,7 +46,7 @@ const App = () => {
 
         {
           category.map((category,idx)=>(
-            <CategoryCard key={idx} category ={category.category} tags={category.tags} thumbnail={category.thumbnail} />
+            <CategoryCard key={idx} category ={category.category} price={category.price} image={category.image} title={category.title}/>
           ))
         }
          
@@ -59,10 +59,12 @@ const App = () => {
       </div>
 
       <div className='  h-75   w-auto   flex items-center justify-between my-3 mx-10   '>
-        <FeatureProductCard />
-        <FeatureProductCard />
-        <FeatureProductCard />
-        <FeatureProductCard />
+        {
+          category.map((category,idx)=>(
+            <FeatureProductCard key={idx}  price={category.price} image={category.image} title={category.title}/>
+          ))
+        }
+         
       </div>
       <Carsoul2 />
       <About />
