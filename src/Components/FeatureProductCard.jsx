@@ -3,18 +3,18 @@ import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { BsArrowRepeat } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
 
-const FeatureProductCard = ({price,image,title}) => {
+const FeatureProductCard = ({price,image,name,desc,subCategory,}) => {
     const navigate=useNavigate();
     return (
         <div onClick={()=>navigate("/details")}
          className="h-75 w-50 flex flex-col   items-start   overflow-hidden   shadow hover:shadow-xl cursor-pointer relative group origin-top hover:scale-98 transition-all duration-200">
 
 
-            <div className="relative h-60 overflow-hidden">
+            <div className="relative h-65  overflow-hidden">
                 <img
                     src= {image}
                     alt=""
-                    className="h-60 w-50 object-contain  transition-transform duration-500 group-hover:scale-108"
+                    className="h-full w-xs object-cover    transition-transform duration-500 group-hover:scale-108"
                 />
 
 
@@ -33,11 +33,15 @@ const FeatureProductCard = ({price,image,title}) => {
             </div>
 
 
-            <h4 className="capitalize text-base p-2 font-medium">
-                 {title}
+            <h4 className="capitalize text-base pl-2 font-medium ">
+                 {name}
             </h4>
-
-            <span className="pl-2 pb-2 font-bold text-red-500">
+            <span className="pl-2  font-normal line-clamp-1 mb-1 ">
+               {
+                    desc
+            }
+            </span>
+            <span className="pl-2  font-bold text-red-500 pb-2">
                 ${price}
             </span>
 
