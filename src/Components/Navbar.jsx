@@ -16,15 +16,15 @@ const Navbar = ({ categories }) => {
                 </div>
                 <div className='flex items-center justify-around    list-none  h-10  w-xs rounded-3xl bg-black text-white   '>
                     {
-                        categories.map((cat, idx) => {
+                        categories?.map((cat, idx) => (
 
-                            return (<li key={idx} className='cursor-pointer flex items-center justify-center text-base h-9 w-19 rounded-3xl hover:bg-white hover:text-black  '>
+                             <li key={idx} className='cursor-pointer flex items-center justify-center text-base h-9 w-19 rounded-3xl hover:bg-white hover:text-black  '>
 
                                 {cat.category}
-                            </li>)
+                            </li>
 
 
-                        })
+                        ))
                     }
 
 
